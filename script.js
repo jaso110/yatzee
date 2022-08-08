@@ -1,6 +1,7 @@
 const dice_player_one = [1, 2, 3, 4, 5, 6];
 const dice_player_two = [1, 2, 3, 4, 5, 6];
 const dice_player_three = [1, 2, 3, 4, 5, 6];
+const dice_player_four = [1, 2, 3, 4, 5, 6];
 
 document.querySelector('#player1-name').addEventListener("click", playerOne);
 document.querySelector('#player2-name').addEventListener("click", playerTwo);
@@ -9,6 +10,7 @@ document.querySelector('#roll-dices').addEventListener("click", function() {
   rollDiceOne();
   rollDiceTwo();
   rollDiceThree();
+  rollDiceFour();
 });
 
 function playerOne() {
@@ -66,4 +68,19 @@ function rollDiceThree() {
   console.log(dice_number3);
 
   document.querySelector(".img3").setAttribute("src", "images/dice" + dice_number3 + ".png");
+}
+
+function rollDiceFour() {
+  for (let i = dice_player_four.length -1; i > 0; i--) {
+    let j = Math.floor(Math.random() * i);
+    let k = dice_player_four[i];
+    dice_player_four[i] = dice_player_four[j];
+    dice_player_four[j] = k;
+  }
+
+  let dice_number4 = dice_player_four[0];
+
+  console.log(dice_number4);
+
+  document.querySelector(".img4").setAttribute("src", "images/dice" + dice_number4 + ".png");
 }
