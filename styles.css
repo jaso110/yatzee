@@ -1,0 +1,39 @@
+body {
+  background-color: #393E46;
+}
+
+img {
+  width: 30%;
+}
+
+footer {
+  margin-top: 5%;
+  color: #EEEEEE;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+}
+
+.player-name {
+  display: inline-block;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+}
+
+.btn {
+  font-size: 2rem;
+  color: #4ECCA3;
+  font-family: 'Indie Flower', cursive;
+}
+
+.heading-btn {
+  font-size: 8rem;
+  text-shadow: 5px 0 #232931;
+}
