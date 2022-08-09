@@ -106,4 +106,5 @@ function rollDiceFive() {
 
   points += dice_number5;
   document.querySelector("#points-1").textContent = points + " points";
+  console.log(points);
 }
