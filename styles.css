@@ -22,18 +22,37 @@ footer {
   display: inline-block;
 }
 
+.player1-btn {
+  padding: 10px;
+  font-size: 2rem;
+  text-shadow: 2px 0 #232931;
+  background-color: #9C060C;
+  color: #4ECCA3;
+  font-family: 'Indie Flower', cursive;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
 .dice {
   text-align: center;
   display: inline-block;
 }
 
-.btn {
+.heading-btn {
+  padding: 10px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  font-size: 8rem;
+  text-shadow: 5px 0 #232931;
+  background-color: #9C060C;
+  color: #4ECCA3;
+  font-family: 'Indie Flower', cursive;
+  border: 2px solid white;
+  border-radius: 25px;
+}
+
+#points-1 {
   font-size: 2rem;
   color: #4ECCA3;
   font-family: 'Indie Flower', cursive;
-}
-
-.heading-btn {
-  font-size: 8rem;
-  text-shadow: 5px 0 #232931;
 }

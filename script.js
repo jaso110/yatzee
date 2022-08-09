@@ -4,8 +4,9 @@ const dice_three = [1, 2, 3, 4, 5, 6];
 const dice_four = [1, 2, 3, 4, 5, 6];
 const dice_five = [1, 2, 3, 4, 5, 6];
 
+var points = 0;
+
 document.querySelector('#player1-name').addEventListener("click", playerOne);
-document.querySelector('#player2-name').addEventListener("click", playerTwo);
 
 document.querySelector('#roll-dices').addEventListener("click", function() {
   rollDiceOne();
@@ -21,12 +22,6 @@ function playerOne() {
   document.querySelector('#player1-name').textContent = playerOneName;
 }
 
-function playerTwo() {
-  var playerTwoName = prompt("Player 2 name...")
-
-  document.querySelector('#player2-name').textContent = playerTwoName;
-}
-
 function rollDiceOne() {
   for (let i = dice_one.length -1; i > 0; i--) {
     let j = Math.floor(Math.random() * i);
@@ -40,6 +35,8 @@ function rollDiceOne() {
   console.log(dice_number1);
 
   document.querySelector(".img1").setAttribute("src", "images/dice" + dice_number1 + ".png");
+
+  points += dice_number1;
 }
 
 function rollDiceTwo() {
@@ -55,6 +52,8 @@ function rollDiceTwo() {
   console.log(dice_number2);
 
   document.querySelector(".img2").setAttribute("src", "images/dice" + dice_number2 + ".png");
+
+  points += dice_number2;
 }
 
 function rollDiceThree() {
@@ -70,6 +69,8 @@ function rollDiceThree() {
   console.log(dice_number3);
 
   document.querySelector(".img3").setAttribute("src", "images/dice" + dice_number3 + ".png");
+
+  points += dice_number3;
 }
 
 function rollDiceFour() {
@@ -85,6 +86,8 @@ function rollDiceFour() {
   console.log(dice_number4);
 
   document.querySelector(".img4").setAttribute("src", "images/dice" + dice_number4 + ".png");
+
+  points += dice_number4;
 }
 
 function rollDiceFive() {
@@ -100,4 +103,7 @@ function rollDiceFive() {
   console.log(dice_number5);
 
   document.querySelector(".img5").setAttribute("src", "images/dice" + dice_number5 + ".png");
+
+  points += dice_number5;
+  document.querySelector("#points-1").textContent = points + " points";
 }
